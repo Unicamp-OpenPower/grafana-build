@@ -13,9 +13,5 @@ install:
   - go run build.go setup
   - go run build.go build
 
-before_script:
-- git config --global url.https://github.com/.insteadOf ssh://git@github.com/
-
 script:
 - yarn test
-
