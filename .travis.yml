@@ -1,0 +1,24 @@
+
+dist: trusty
+os: 
+  - linux-ppc64le
+sudo: required
+language: go
+go:
+- "1.11.5"
+
+before_install:
+  - go get github.com/grafana/grafana
+  - cd $GOPATH/src/github.com/grafana/grafana
+  - yarn install --pure-lockfile
+
+install:
+- go run build.go setup
+- go run build.go build
+
+before_script:
+- git config --global url.https://github.com/.insteadOf ssh://git@github.com/
+
+script:
+- yarn test
+
