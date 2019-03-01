@@ -7,9 +7,13 @@ go:
 - "1.11.5"
 
 install:
-  - go get github.com/grafana/grafana
-  - cd $GOPATH/src/github.com/grafana/grafana
-  - yarn install --pure-lockfile
+  - cd $GOPATH/src
+  - mkdir github.com
+  - cd github.com
+  - mkdir grafana
+  - cd grafana
+  - git clone https://github.com/grafana/grafana.git 
+  - cd grafana
   - go run build.go setup
   - go run build.go build
 
