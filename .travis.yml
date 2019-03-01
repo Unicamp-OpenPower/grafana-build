@@ -1,4 +1,4 @@
-dist: trusty
+dist: xenial
 os: 
   - linux-ppc64le
 sudo: required
