@@ -7,6 +7,7 @@ go:
 - "1.11.5"
 
 install:
+  - yarn install --pure-lockfile
   - cd $GOPATH/src/github.com
   - mkdir grafana
   - cd grafana
