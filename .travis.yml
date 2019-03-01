@@ -8,11 +8,11 @@ go:
 
 install:
   - sudo touch nodesource.list
-  - sudo echo "    6.2.1-1nodesource1~xenial1 500" > nodesource.list
   - sudo chmod 755 nodesource.list
-  - sudo echo "       500 https://deb.nodesource.com/node_6.x xenial/main amd64 Packages" > nodesource.list
-  - sudo echo "    4.2.6~dfsg-1ubuntu4 500" > nodesource.list
-  - sudo echo "       500 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages" > nodesource.list
+  - sudo echo "    6.2.1-1nodesource1~xenial1 500" >> nodesource.list
+  - sudo echo "       500 https://deb.nodesource.com/node_6.x xenial/main amd64 Packages" >> nodesource.list
+  - sudo echo "    4.2.6~dfsg-1ubuntu4 500" >> nodesource.list
+  - sudo echo "       500 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages" >> nodesource.list
   - sudo mv nodesource.list /etc/apt/sources.list.d/
   - curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
   - sudo apt-get update
