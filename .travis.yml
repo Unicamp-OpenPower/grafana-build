@@ -7,7 +7,7 @@ go:
 - "1.11.5"
 
 install:
-  - curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+  - ccurl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
   - sudo apt-get install -y nodejs
   - yarn install --pure-lockfile
   - cd $GOPATH/src/github.com
