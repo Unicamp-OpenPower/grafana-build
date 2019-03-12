@@ -2,21 +2,17 @@ dist: xenial
 os: 
   - linux-ppc64le
 sudo: required
-language: go
-go:
-- "1.11.5"
+language: node_js
+node_js:
+  - "7"
+
+before_install:
+  - sudo apt-get update
+  - sudo wget https://dl.google.com/go/go1.9.4.linux-ppc64le.tar.gz
+  - sudo tar -C /usr/local -xzf go1.9.4.linux-ppc64le.tar.gz
+  - export PATH=$PATH:/usr/local/go/bin
 
 install:
-  - sudo touch nodesource.list
-  - sudo chmod 755 nodesource.list
-  - sudo echo "    6.2.1-1nodesource1~xenial1 500" >> nodesource.list
-  - sudo echo "       500 https://deb.nodesource.com/node_6.x xenial/main amd64 Packages" >> nodesource.list
-  - sudo echo "    4.2.6~dfsg-1ubuntu4 500" >> nodesource.list
-  - sudo echo "       500 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages" >> nodesource.list
-  - sudo mv nodesource.list /etc/apt/sources.list.d/
-  - curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
-  - sudo apt-get update
-  - sudo apt-get install -y nodejs
   - yarn install --pure-lockfile
   - cd $GOPATH/src/github.com
   - mkdir grafana
