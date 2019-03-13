@@ -8,8 +8,8 @@ node_js:
 
 before_install:
   - sudo apt-get update
-  - sudo wget https://dl.google.com/go/go1.9.4.linux-ppc64le.tar.gz
-  - sudo tar -C /usr/local -xzf go1.9.4.linux-ppc64le.tar.gz
+  - sudo wget https://dl.google.com/go/go1.12.linux-ppc64le.tar.gz
+  - sudo tar -C /usr/local -xzf go1.12.linux-ppc64le.tar.gz
   - export PATH=$PATH:/usr/local/go/bin
 
 install:
