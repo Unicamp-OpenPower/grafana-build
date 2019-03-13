@@ -14,7 +14,11 @@ before_install:
 
 install:
   - yarn install --pure-lockfile
-  - cd $GOPATH/src/github.com
+  - cd $GOPATH
+  - mkdir src
+  - cd src
+  - mkdir github.com
+  - cd github.com
   - mkdir grafana
   - cd grafana
   - git clone https://github.com/grafana/grafana.git 
