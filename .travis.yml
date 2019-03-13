@@ -10,9 +10,11 @@ before_install:
   - cd /bin
   - sudo wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
   - sudo chmod 777 phantomjs
-  
   - sudo apt-get update
   - nvm install 8
+  
+  - go get github.com/Unknwon/bra
+  - npm install -g yarn
 
 install:
   - yarn install --pure-lockfile
