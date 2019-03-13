@@ -21,7 +21,7 @@ install:
   - cd github.com
   - mkdir grafana
   - cd grafana
-  - go get github.com/grafana/grafana
+  - git clone https://github.com/grafana/grafana.git
   - cd $GOPATH/src/github.com/grafana/grafana
   - go run build.go setup
   - go run build.go build
