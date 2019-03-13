@@ -2,27 +2,21 @@ dist: xenial
 os: 
   - linux-ppc64le
 sudo: required
-language: node_js
-node_js:
-  - "7"
+language: go
+go:
+- "1.11.5"
 
 before_install:
   - sudo apt-get update
-  - sudo wget https://dl.google.com/go/go1.12.linux-ppc64le.tar.gz
-  - sudo tar -C /usr/local -xzf go1.12.linux-ppc64le.tar.gz
-  - export PATH=$PATH:/usr/local/go/bin
+  - nvm install 7
 
 install:
   - yarn install --pure-lockfile
-  - cd $GOPATH
-  - mkdir src
-  - cd src
-  - mkdir github.com
-  - cd github.com
+  - cd $GOPATH/src/github.com
   - mkdir grafana
   - cd grafana
-  - git clone https://github.com/grafana/grafana.git
-  - cd $GOPATH/src/github.com/grafana/grafana
+  - git clone https://github.com/grafana/grafana.git 
+  - cd grafana
   - go run build.go setup
   - go run build.go build
   - yarn install --pure-lockfile
