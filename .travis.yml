@@ -7,9 +7,9 @@ go:
 - "1.11.5"
 
 before_install:
-  - wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
+  - cd /bin
+  - sudo wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
   - sudo chmod 777 phantomjs
-  - ./phantomjs
   
   - sudo apt-get update
   - nvm install 8
