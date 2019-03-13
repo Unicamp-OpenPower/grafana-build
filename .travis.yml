@@ -8,7 +8,7 @@ go:
 
 before_install:
   - sudo apt-get update
-  - nvm install 7
+  - nvm install 8
 
 install:
   - yarn install --pure-lockfile
