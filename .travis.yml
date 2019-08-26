@@ -11,7 +11,7 @@ before_install:
   - sudo wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
   - sudo chmod 777 phantomjs
   - sudo apt-get update
-  - nvm install 8
+  - nvm install node
 
 install:
   - cd $GOPATH/src/github.com
