@@ -17,11 +17,11 @@ install:
   - cd $GOPATH/src/github.com
   - mkdir grafana
   - cd grafana
-  - git clone https://github.com/grafana/grafana.git 
+  - git clone https://github.com/grafana/grafana.git
   - cd grafana
   - go run build.go setup
   - go run build.go build
-  - yarn install --pure-lockfile
+  - yarn install
 script:
-- npm install -g yarn
-- yarn test
+  - npm install -g yarn
+  - yarn test
