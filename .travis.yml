@@ -1,10 +1,10 @@
-dist: xenial
-os: 
-  - linux-ppc64le
+dist: bionic
+os: linux
+arch: ppc64le
 sudo: required
 language: go
 go:
-- "1.12.9"
+- "1.13.x"
 
 before_install:
   - cd /bin
