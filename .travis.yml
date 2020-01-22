@@ -10,7 +10,7 @@ before_install:
   - cd /bin
   - sudo wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
   - sudo chmod 777 phantomjs
-  - sudo apt-get update
+  - sudo apt update
   - nvm install 10.10.0
 
 install:
