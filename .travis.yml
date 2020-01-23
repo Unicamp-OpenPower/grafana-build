@@ -11,7 +11,7 @@ install:
   - sudo wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
   - sudo chmod 777 phantomjs
   - sudo apt update
-  - sudo apt install npm yarn
+  - sudo apt install yarn
   - nvm install 10.10.0
   - yarn install --pure-lockfile
   - npm install -g yarn
