@@ -11,9 +11,7 @@ install:
   - sudo wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
   - sudo chmod 777 phantomjs
   - sudo apt update
-  - sudo apt install yarn
   - nvm install 12.13.1
-  - npm install -g yarn
 script:
   - cd $GOPATH/src/github.com
   - mkdir grafana
@@ -21,6 +19,4 @@ script:
   - git clone https://github.com/grafana/grafana.git
   - cd grafana
   - make
-  #- go run build.go setup
-  #- go run build.go build
-  #- yarn test
+  - make test
