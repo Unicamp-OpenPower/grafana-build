@@ -12,7 +12,7 @@ install:
   - sudo chmod 777 phantomjs
   - sudo apt update
   - sudo apt install yarn
-  - nvm install 10.10.0
+  - nvm install 12.13.1
   - npm install -g yarn
 script:
   - cd $GOPATH/src/github.com
