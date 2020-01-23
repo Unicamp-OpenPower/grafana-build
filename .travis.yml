@@ -7,9 +7,9 @@ go:
 - "1.13.x"
 
 install:
-  #- cd /bin
-  #- sudo wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
-  #- sudo chmod 777 phantomjs
+  - cd /bin
+  - sudo wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
+  - sudo chmod 777 phantomjs
   - sudo apt update
   - nvm install 12.13.1
   - npm install -g yarn
