@@ -13,7 +13,6 @@ install:
   - sudo apt update
   - sudo apt install yarn
   - nvm install 10.10.0
-  - yarn install --pure-lockfile
   - npm install -g yarn
 script:
   - cd $GOPATH/src/github.com
