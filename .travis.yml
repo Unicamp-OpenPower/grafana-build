@@ -20,6 +20,7 @@ script:
   - git clone https://github.com/grafana/grafana.git
   - cd grafana
   - make
+  - make test
   
 notifications:
   slack:
