@@ -6,14 +6,15 @@ language: go
 go:
 - "1.13.x"
 
-before_install:
+install:
   - cd /bin
   - sudo wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
   - sudo chmod 777 phantomjs
   - sudo apt update
   - nvm install 10.10.0
-
-install:
+  - yarn install
+  - npm install -g yarn
+script:
   - cd $GOPATH/src/github.com
   - mkdir grafana
   - cd grafana
@@ -21,7 +22,4 @@ install:
   - cd grafana
   - go run build.go setup
   - go run build.go build
-  - yarn install
-script:
-  - npm install -g yarn
   - yarn test
