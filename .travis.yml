@@ -12,8 +12,8 @@ install:
   - sudo chmod 777 phantomjs
   - sudo apt update
   - nvm install 10.10.0
-  - yarn install
-  - npm install -g yarn
+  #- yarn install
+  #- npm install -g yarn
 script:
   - cd $GOPATH/src/github.com
   - mkdir grafana
@@ -22,4 +22,5 @@ script:
   - cd grafana
   - go run build.go setup
   - go run build.go build
-  - yarn test
+  #- yarn test
+  - npm test
