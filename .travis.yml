@@ -7,14 +7,12 @@ go:
 - "1.14.x"
 
 install:
-  - cd /bin
-  - sudo wget https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
+  - wget --quiet https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
   - sudo chmod 777 phantomjs
-  - sudo apt update
+  - sudo mv phantomjs /bin
   - nvm install 12.13.1
   - npm install -g yarn
 script:
-  - cd $TRAVIS_BUILD_DIR
   - git clone https://github.com/grafana/grafana.git
   - cd grafana
   - make
