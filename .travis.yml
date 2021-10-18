@@ -10,13 +10,14 @@ install:
   - wget --quiet https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
   - sudo chmod 777 phantomjs
   - sudo mv phantomjs /bin
-  - nvm install 12.13.1
+  - nvm install 14.17.6
   - npm install -g yarn
 script:
   - git clone https://github.com/grafana/grafana.git
   - cd grafana
   - make
-  - make test
+  - make build
+  # - make test
   
 notifications:
   slack:
