@@ -4,7 +4,7 @@ arch: ppc64le
 sudo: required
 language: go
 go:
-- "1.14.x"
+- "1.17.x"
 
 install:
   - wget --quiet https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
@@ -12,11 +12,15 @@ install:
   - sudo mv phantomjs /bin
   - nvm install 14.17.6
   - npm install -g yarn
+  - export NODE_OPTIONS=--max_old_space_size=512
 script:
   - git clone https://github.com/grafana/grafana.git
   - cd grafana
   - make
-  - make build
+  - yarn
+  - make build || true
+  - ./bin/linux-ppc64le/grafana-cli --version
+  - ./bin/linux-ppc64le/grafana-server -v
   # - make test
   
 notifications:
